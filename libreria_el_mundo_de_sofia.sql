@@ -1,4 +1,3 @@
-const sqlScript = `
 CREATE TABLE `libros`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `id_detalles_libros_fk` BIGINT NOT NULL
@@ -110,6 +109,3 @@ ALTER TABLE
     `cantidad_stock` ADD CONSTRAINT `cantidad_stock_id_pedidos_fk_foreign` FOREIGN KEY(`id_pedidos_fk`) REFERENCES `pedidos`(`id`);
 ALTER TABLE
     `clientes` ADD CONSTRAINT `clientes_id_busqueda_fk_foreign` FOREIGN KEY(`id_busqueda_fk`) REFERENCES `busqueda`(`id`);
-`;
-
-module.exports = sqlScript;
